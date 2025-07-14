@@ -30,13 +30,13 @@ export default function ScheduleManager() {
   const [customDays, setCustomDays] = useState<string[]>([]);
 
   const fetchSchedules = async () => {
-    const res = await fetch("/api/schedules");
+    const res = await fetch(`${API_BASE}/schedules`);
     const data = await res.json();
     setSchedules(data);
   };
 
   const fetchLinkNames = async () => {
-    const res = await fetch("/api/links");
+    const res = await fetch(`${API_BASE}/links`);
     const data = await res.json();
     const names = data.map((item: { name: string }) => item.name);
     const unique = Array.from(new Set(names.filter((n) => n !== "default")));
@@ -224,7 +224,7 @@ export default function ScheduleManager() {
   const renameSchedule = async () => {
     if (!selected || !renameTarget || selected === renameTarget) return;
 
-    const res = await fetch("/api/schedules/rename", {
+    const res = await fetch(`${API_BASE}/schedules/rename`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ old_name: selected, new_name: renameTarget }),
@@ -246,7 +246,7 @@ export default function ScheduleManager() {
     if (!newScheduleName) return;
     const content = dayKeys.map((d) => `${d}: 00:00:01 default`).join("\n");
 
-    await fetch("/api/schedules", {
+    await fetch(`${API_BASE}/schedules`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: newScheduleName, content }),
@@ -371,7 +371,7 @@ export default function ScheduleManager() {
                 onClick={async () => {
                   const newName = prompt(`Duplicate "${name}" as:`, `${name}_copy`);
                   if (!newName) return;
-                  const res = await fetch("/api/schedules/duplicate", {
+                  const res = await fetch(`${API_BASE}/schedules/duplicate`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ old_name: name, new_name: newName }),

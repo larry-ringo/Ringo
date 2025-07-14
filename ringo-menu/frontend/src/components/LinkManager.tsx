@@ -5,18 +5,19 @@ interface LinkItem {
   link: string;
 }
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 export default function LinkManager() {
   const [links, setLinks] = useState<LinkItem[]>([]);
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
 
-  // For editing
-  const [editingName, setEditingName] = useState<string | null>(null); // stores the old name
+  const [editingName, setEditingName] = useState<string | null>(null);
   const [newName, setNewName] = useState("");
   const [newLink, setNewLink] = useState("");
 
   const fetchLinks = async () => {
-    const res = await fetch("/api/links");
+    const res = await fetch(`${API_BASE}/links`);
     const data = await res.json();
     setLinks(data);
   };
@@ -30,7 +31,7 @@ export default function LinkManager() {
       return;
     }
 
-    await fetch("/api/links", {
+    await fetch(`${API_BASE}/links`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, link }),
@@ -42,10 +43,10 @@ export default function LinkManager() {
   };
 
   const deleteLink = async (name: string, link: string) => {
-    await fetch("/api/links", {
+    await fetch(`${API_BASE}/links`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, link }), // match FastAPI Link model
+      body: JSON.stringify({ name, link }),
     });
     fetchLinks();
     window.location.reload();
@@ -53,7 +54,7 @@ export default function LinkManager() {
 
   const saveEditedLink = async () => {
     if (!editingName) return;
-    await fetch("/api/links", {
+    await fetch(`${API_BASE}/links`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -143,10 +144,10 @@ export default function LinkManager() {
                   ✏️ Edit
                 </button>
                 {l.name !== "default" && (
-                <button onClick={() => deleteLink(l.name, l.link)} style={{ marginLeft: "0.5rem" }}>
-                  🗑️ Delete
-                </button>
-              )}
+                  <button onClick={() => deleteLink(l.name, l.link)} style={{ marginLeft: "0.5rem" }}>
+                    🗑️ Delete
+                  </button>
+                )}
               </>
             )}
           </li>

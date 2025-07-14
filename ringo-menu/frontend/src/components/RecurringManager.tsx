@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const dayMap = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 const RecurringManager = () => {
@@ -17,24 +19,23 @@ const RecurringManager = () => {
   const [linkNames, setLinkNames] = useState(["default"]);
 
   useEffect(() => {
-    fetch("/api/schedules")
+    fetch(`${API_BASE}/schedules`)
       .then((res) => res.json())
       .then((data) => {
         setAllSchedules(data);
-        // Do NOT select any schedule initially
       });
 
-    fetch("/api/links")
+    fetch(`${API_BASE}/links`)
       .then((res) => res.json())
       .then((data) => {
-        const names = data.map((d) => d.name);
+        const names = data.map((d: { name: string }) => d.name);
         setLinkNames(["default", ...names.filter((n) => n !== "default")]);
       });
   }, []);
 
   useEffect(() => {
     if (selectedSchedule) {
-      fetch(`/api/recurring/${selectedSchedule}`)
+      fetch(`${API_BASE}/recurring/${selectedSchedule}`)
         .then((res) => res.json())
         .then((data) => setEntries(data));
     } else {
@@ -59,19 +60,19 @@ const RecurringManager = () => {
       alert("Days have not been chosen.");
       return;
     }
-    
+
     if (!start || !end || !name) {
-      alert("Make sure all the field are filled out.");
+      alert("Make sure all the fields are filled out.");
       return;
     }
-    
+
     if (end <= start) {
       alert("End time must be after start time.");
       return;
     }
 
     if (newEntry.every <= newEntry.duration) {
-      alert("The lenght of the \"every\" field must be more than the \"for\" field.");
+      alert('The "every" field must be greater than the "for" field.');
       return;
     }
 
@@ -97,7 +98,8 @@ const RecurringManager = () => {
 
   const save = () => {
     if (!selectedSchedule) return;
-    fetch(`/api/recurring/${selectedSchedule}`, {
+
+    fetch(`${API_BASE}/recurring/${selectedSchedule}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(entries),
@@ -191,7 +193,8 @@ const RecurringManager = () => {
           <ul style={{ marginTop: "1rem" }}>
             {entries.map((e, i) => (
               <li key={i}>
-                {dayNamesFromBinary(e.days)} <br /> {e.start} - {e.end}
+                {dayNamesFromBinary(e.days)} <br />
+                {e.start} - {e.end}
                 &emsp; every {e.every}s for {e.duration}s &emsp; show {e.name}
                 &emsp;&emsp;
                 <button onClick={() => removeEntry(i)}>🗑️ Delete</button>

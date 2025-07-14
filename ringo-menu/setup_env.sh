@@ -11,7 +11,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # install backend requirements
-pip install -r requirements.txt
+pip install -r app/requirements.txt
 
 # install frontend dependencies
 cd frontend

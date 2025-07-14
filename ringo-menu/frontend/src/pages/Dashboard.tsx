@@ -4,7 +4,7 @@ import LinkManager from "../components/LinkManager";
 import ScheduleManager from "../components/ScheduleManager";
 import RecurringManager from "../components/RecurringManager";
 import Emails from "../components/Emails";
-import PasswordGate from "../components/PasswordGate"; // make sure this exists
+import PasswordGate from "../components/PasswordGate";
 
 export default function Dashboard() {
   return (

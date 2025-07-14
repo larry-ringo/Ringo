@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 export default function Emails() {
   const [emails, setEmails] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
+  const API_BASE = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    fetch("/api/emails")
+    fetch(`${API_BASE}/emails`)
       .then((res) => res.json())
       .then((data) => setEmails(data))
       .catch((err) => console.error("Failed to fetch emails:", err));
