@@ -51,7 +51,7 @@ const HomeMobile: React.FC = () => {
 
         {/* Example: Menu Link */}
         <a
-          href="http://localhost:5173/"
+          href="https://menu.ringocoffee.com/"
           rel="noopener noreferrer"
           style={{
             position: "absolute",

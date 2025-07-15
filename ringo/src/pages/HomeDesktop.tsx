@@ -57,7 +57,7 @@ const HomeDesktop: React.FC = () => {
 
         {/* External Menu link */}
         <a
-          href="http://localhost:5173/"
+          href="https://menu.ringocoffee.com/"
           rel="noopener noreferrer"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
           onMouseLeave={() => setImgSrc(defaultImg)}

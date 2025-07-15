@@ -7,6 +7,8 @@ import locIcon from "../assets/loc_icon.png";
 import emailIcon from "../assets/email_icon.png";
 import logo from "../assets/logo.png";
 
+const API_BASE = process.env.REACT_APP_API_URL;
+
 // Dynamically load Kalam font
 const loadFont = () => {
   const link = document.createElement("link");
@@ -95,7 +97,7 @@ const AboutDesktop: React.FC = () => {
                 const email = (e.target as any).email.value;
 
                 try {
-                  const response = await fetch("http://localhost:8000/api/emails", {
+                  const response = await fetch(`${API_BASE}/emails`, {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
