@@ -6,7 +6,7 @@ export default function WebMenu() {
   useEffect(() => {
     const fetchAndSetDefaultEmbed = async () => {
       try {
-        const res = await fetch("/api/links");
+        const res = await fetch(`${API_BASE}/links`);
         const data = await res.json();
 
         const defaultEntry = data.find((entry: { name: string }) => entry.name === "default");
