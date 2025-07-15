@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 type Entry = { time: string; name: string };
 type Schedule = { [day: string]: Entry[] };
 type LinkMap = { [name: string]: string };
@@ -49,7 +51,7 @@ export default function ShowSchedule() {
     let timeoutId: NodeJS.Timeout;
 
     const fetchLinks = async (): Promise<LinkMap> => {
-      const res = await fetch("/api/links");
+      const res = await fetch(`${API_BASE}/links`);
       const data = await res.json();
       const map: LinkMap = {};
       for (const item of data) {
@@ -59,7 +61,7 @@ export default function ShowSchedule() {
     };
 
     const fetchSchedule = async (): Promise<Schedule> => {
-      const res = await fetch(`/api/schedules/${schedule}`);
+      const res = await fetch(`${API_BASE}/schedules/${schedule}`);
       const data = await res.json();
       const lines = data.content.split("\n").map((l: string) => l.trim());
       const parsed: Schedule = {};
@@ -82,7 +84,7 @@ export default function ShowSchedule() {
     };
 
     const fetchRecurring = async (): Promise<RecurringEntry[]> => {
-      const res = await fetch(`/api/recurring/${schedule}`);
+      const res = await fetch(`${API_BASE}/recurring/${schedule}`);
       const data = await res.json();
       return data.map((entry: any) => ({
         days: entry.days,
@@ -175,10 +177,10 @@ export default function ShowSchedule() {
 
     const checkForUpdates = async () => {
       // regular
-      const res = await fetch(`/api/schedules/${schedule}`);
+      const res = await fetch(`${API_BASE}/schedules/${schedule}`);
       const data = await res.json();
       // recurring
-      const res2 = await fetch(`/api/recurring_raw/${schedule}`);
+      const res2 = await fetch(`${API_BASE}/recurring_raw/${schedule}`);
       const data2 = await res2.json();
       if (data.content !== lastContent || data2.content !== lastRecurringContent) {
         window.location.reload();
@@ -193,11 +195,11 @@ export default function ShowSchedule() {
         scheduleData = await fetchSchedule();
         recurringData = await fetchRecurring();
 
-        const res = await fetch(`/api/schedules/${schedule}`);
+        const res = await fetch(`${API_BASE}/schedules/${schedule}`);
         const data = await res.json();
         lastContent = data.content;
 
-        const res2 = await fetch(`/api/recurring_raw/${schedule}`);
+        const res2 = await fetch(`${API_BASE}/recurring_raw/${schedule}`);
         const data2 = await res2.json();
         lastRecurringContent = data2.content;
 
