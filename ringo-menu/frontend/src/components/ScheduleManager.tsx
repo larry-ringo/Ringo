@@ -18,6 +18,8 @@ const seconds = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, "0
 type Entry = { time: string; name: string };
 type Schedule = { [day: string]: Entry[] };
 
+const API_BASE = import.meta.env.VITE_API_URL;
+
 export default function ScheduleManager() {
   const [schedules, setSchedules] = useState<string[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
