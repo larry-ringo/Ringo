@@ -46,7 +46,7 @@ export default function ScheduleManager() {
   };
 
   const loadSchedule = async (name: string) => {
-    const res = await fetch(`/api/schedules/${name}`);
+    const res = await fetch(`${API_BASE}/schedules/${name}`);
     const data = await res.json();
     const lines = data.content.split("\n").map((l: string) => l.trim());
     const schedule: Schedule = {};
@@ -214,7 +214,7 @@ export default function ScheduleManager() {
       })
       .join("\n");
 
-    await fetch(`/api/schedules/${selected}`, {
+    await fetch(`${API_BASE}/schedules/${selected}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: selected, content }),
@@ -261,14 +261,30 @@ export default function ScheduleManager() {
 
   const deleteSchedule = async (name: string) => {
     if (!window.confirm(`Delete schedule "${name}"?`)) return;
-    await fetch(`/api/schedules/${name}`, { method: "DELETE" });
-    if (selected === name) {
-      setSelected(null);
-      setParsedSchedule({});
+
+    try {
+      const res = await fetch(`${API_BASE}/schedules/${name}`, { method: "DELETE" });
+
+      if (!res.ok) {
+        const err = await res.text();
+        console.error(`Failed to delete schedule "${name}": ${err}`);
+        alert(`Failed to delete schedule: ${err}`);
+        return;
+      }
+
+      if (selected === name) {
+        setSelected(null);
+        setParsedSchedule({});
+      }
+
+      fetchSchedules();
+      window.location.reload(); // so the rest of the component are updated
+    } catch (err) {
+      console.error("Error during delete:", err);
+      alert('Error during deleting "${name}"');
     }
-    fetchSchedules();
-    window.location.reload(); // so the rest of the component are updated
   };
+
 
   useEffect(() => {
     fetchSchedules();
