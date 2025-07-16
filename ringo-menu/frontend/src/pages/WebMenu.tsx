@@ -3,6 +3,18 @@ const API_BASE = import.meta.env.VITE_API_URL;
 
 export default function WebMenu() {
   const [embedLink, setEmbedLink] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // run once on mount
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchAndSetEmbed = async () => {
@@ -10,7 +22,6 @@ export default function WebMenu() {
         const res = await fetch(`${API_BASE}/links`);
         const data = await res.json();
 
-        const isMobile = window.innerWidth <= 768;
         const targetName = isMobile ? "default_mobile" : "default";
         const targetEntry = data.find((entry: { name: string }) => entry.name === targetName);
 
@@ -40,10 +51,12 @@ export default function WebMenu() {
     };
 
     fetchAndSetEmbed();
-  }, []);
+  }, [isMobile]);
+
+  const paddingTop = isMobile ? "225%" : "56.25%"; // taller ratio for mobile
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "0", paddingTop: "56.25%" }}>
+    <div style={{ position: "relative", width: "100%", height: "0", paddingTop }}>
       {embedLink ? (
         <iframe
           loading="lazy"
