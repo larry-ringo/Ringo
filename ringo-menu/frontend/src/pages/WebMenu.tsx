@@ -53,7 +53,7 @@ export default function WebMenu() {
     fetchAndSetEmbed();
   }, [isMobile]);
 
-  const paddingTop = isMobile ? "225%" : "56.25%"; // taller ratio for mobile
+  const paddingTop = isMobile ? "200%" : "56.25%"; // taller ratio for mobile
 
   return (
     <div style={{ position: "relative", width: "100%", height: "0", paddingTop }}>
