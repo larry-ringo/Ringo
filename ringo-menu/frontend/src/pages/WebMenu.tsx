@@ -2,24 +2,26 @@ import React, { useEffect, useState } from "react";
 const API_BASE = import.meta.env.VITE_API_URL;
 
 export default function WebMenu() {
-  const [defaultEmbed, setDefaultEmbed] = useState<string | null>(null);
+  const [embedLink, setEmbedLink] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchAndSetDefaultEmbed = async () => {
+    const fetchAndSetEmbed = async () => {
       try {
         const res = await fetch(`${API_BASE}/links`);
         const data = await res.json();
 
-        const defaultEntry = data.find((entry: { name: string }) => entry.name === "default");
+        const isMobile = window.innerWidth <= 768;
+        const targetName = isMobile ? "default_mobile" : "default";
+        const targetEntry = data.find((entry: { name: string }) => entry.name === targetName);
 
-        if (!defaultEntry || !defaultEntry.link) {
-          alert("Default link error. Contact support.");
+        if (!targetEntry || !targetEntry.link) {
+          alert(`${targetName} link error. Contact support.`);
           return;
         }
 
-        evaluateAndSet(defaultEntry.link);
+        evaluateAndSet(targetEntry.link);
       } catch (err) {
-        console.error("❌ Failed to fetch default link:", err);
+        console.error("❌ Failed to fetch embed link:", err);
       }
     };
 
@@ -28,21 +30,21 @@ export default function WebMenu() {
         ? `${link}?embed`
         : link;
 
-      setDefaultEmbed((prev) => {
+      setEmbedLink((prev) => {
         if (prev !== embedUrl) {
-          console.log("🔄 Default link set to:", embedUrl);
+          console.log("🔄 Embed link set to:", embedUrl);
           return embedUrl;
         }
         return prev;
       });
     };
 
-    fetchAndSetDefaultEmbed();
+    fetchAndSetEmbed();
   }, []);
 
   return (
     <div style={{ position: "relative", width: "100%", height: "0", paddingTop: "56.25%" }}>
-      {defaultEmbed ? (
+      {embedLink ? (
         <iframe
           loading="lazy"
           style={{
@@ -53,7 +55,7 @@ export default function WebMenu() {
             left: 0,
             border: "none",
           }}
-          src={defaultEmbed}
+          src={embedLink}
           allow="fullscreen"
           title="Ringo Schedule"
         />

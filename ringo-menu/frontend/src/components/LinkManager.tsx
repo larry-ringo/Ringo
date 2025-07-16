@@ -143,7 +143,7 @@ export default function LinkManager() {
                 >
                   ✏️ Edit
                 </button>
-                {l.name !== "default" && (
+                {l.name !== "default" && l.name !== "default_mobile" && (
                   <button onClick={() => deleteLink(l.name, l.link)} style={{ marginLeft: "0.5rem" }}>
                     🗑️ Delete
                   </button>
