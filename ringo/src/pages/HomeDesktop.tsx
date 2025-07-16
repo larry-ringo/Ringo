@@ -59,6 +59,7 @@ const HomeDesktop: React.FC = () => {
         <a
           href="https://menu.ringocoffee.com/"
           rel="noopener noreferrer"
+          aria-label="Menu"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
           onMouseLeave={() => setImgSrc(defaultImg)}
           style={{
@@ -76,6 +77,7 @@ const HomeDesktop: React.FC = () => {
         <a
           href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
           rel="noopener noreferrer"
+          aria-label="Delivery"
           onMouseEnter={() => setImgSrc(hoverDeliveryImg)}
           onMouseLeave={() => setImgSrc(defaultImg)}
           style={{
@@ -94,6 +96,7 @@ const HomeDesktop: React.FC = () => {
           href="https://ringo-coffee-donutsorder.square.site/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Pickup"
           onMouseEnter={() => setImgSrc(hoverPickupImg)}
           onMouseLeave={() => setImgSrc(defaultImg)}
           style={{

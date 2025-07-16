@@ -53,6 +53,7 @@ const HomeMobile: React.FC = () => {
         <a
           href="https://menu.ringocoffee.com/"
           rel="noopener noreferrer"
+          aria-label="Delivery"
           style={{
             position: "absolute",
             top: 0 * scale,
@@ -69,6 +70,7 @@ const HomeMobile: React.FC = () => {
           href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Delivery"
           style={{
             position: "absolute",
             top: 660 * scale,
@@ -83,6 +85,7 @@ const HomeMobile: React.FC = () => {
           href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Delivery"
           style={{
             position: "absolute",
             top: 600 * scale,
@@ -97,6 +100,7 @@ const HomeMobile: React.FC = () => {
           href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Delivery"
           style={{
             position: "absolute",
             top: 620 * scale,
@@ -114,6 +118,7 @@ const HomeMobile: React.FC = () => {
           href="https://ringo-coffee-donutsorder.square.site/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Pickup"
           style={{
             position: "absolute",
             top: 0 * scale,
@@ -128,6 +133,7 @@ const HomeMobile: React.FC = () => {
           href="https://ringo-coffee-donutsorder.square.site/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Pickup"
           style={{
             position: "absolute",
             top: 460 * scale,
@@ -142,6 +148,7 @@ const HomeMobile: React.FC = () => {
           href="https://ringo-coffee-donutsorder.square.site/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Pickup"
           style={{
             position: "absolute",
             top: 460 * scale,
