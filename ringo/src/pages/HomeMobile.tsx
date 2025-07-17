@@ -51,7 +51,7 @@ const HomeMobile: React.FC = () => {
 
         {/* Example: Menu Link */}
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           style={{
@@ -65,7 +65,7 @@ const HomeMobile: React.FC = () => {
           }}
         />
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           style={{
@@ -79,7 +79,7 @@ const HomeMobile: React.FC = () => {
           }}
         />
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           style={{

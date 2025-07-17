@@ -204,7 +204,7 @@ export default function ShowSchedule() {
         lastRecurringContent = data2.content;
 
         intervalId = updateLink();
-        setInterval(checkForUpdates, 10000);
+        setInterval(checkForUpdates, 3600000);
       } catch (err) {
         console.error("❌ init failed:", err);
       }

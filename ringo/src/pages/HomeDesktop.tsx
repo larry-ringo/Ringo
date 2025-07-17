@@ -57,7 +57,7 @@ const HomeDesktop: React.FC = () => {
 
         {/* External Menu link */}
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
@@ -73,7 +73,7 @@ const HomeDesktop: React.FC = () => {
           }}
         />
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
@@ -89,7 +89,7 @@ const HomeDesktop: React.FC = () => {
           }}
         />
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
@@ -105,7 +105,7 @@ const HomeDesktop: React.FC = () => {
           }}
         />
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
@@ -121,7 +121,7 @@ const HomeDesktop: React.FC = () => {
           }}
         />
         <a
-          href="https://menu.ringocoffee.com/"
+          href="https://ringo-coffee-donutsorder.square.site/#ZZDNQF2QVB6WCPOGV7G67OX6"
           rel="noopener noreferrer"
           aria-label="Menu"
           onMouseEnter={() => setImgSrc(hoverMenuImg)}
