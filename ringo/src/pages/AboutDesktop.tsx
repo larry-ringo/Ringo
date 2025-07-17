@@ -30,7 +30,7 @@ const AboutDesktop: React.FC = () => {
       style={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "#987384",
+        backgroundColor: "#6EB5D7",
         fontFamily: "'Kalam', cursive",
         color: "black",
         display: "flex",
@@ -146,7 +146,7 @@ const AboutDesktop: React.FC = () => {
               <button
                 type="submit"
                 style={{
-                  backgroundColor: "#bbb",
+                  backgroundColor: "#0270BA",
                   border: "none",
                   padding: "8px 16px",
                   borderRadius: "20px",
@@ -200,10 +200,37 @@ const AboutDesktop: React.FC = () => {
             gap: "20px",
           }}
         >
-          <ContactRow icon={instaIcon} text="@ringocoffeeanddonuts" />
-          <ContactRow icon={locIcon} text={`2001 Federal St,\nPhiladelphia, PA 19146`} />
-          <ContactRow icon={phoneIcon} text="(215) 594-2802" />
-          <ContactRow icon={emailIcon} text="info@ringocoffee.com" />
+          <a 
+            href="https://www.instagram.com/ringocoffeeanddonuts/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ContactRow icon={instaIcon} text="@ringocoffeeanddonuts" />
+          </a>
+
+          <a 
+            href="https://maps.app.goo.gl/oC333buvmotQSFiu8" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ContactRow icon={locIcon} text="2001 Federal St, Philadelphia, PA 19146" />
+          </a>
+
+          <a 
+            href="tel:2155942802" 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ContactRow icon={phoneIcon} text="(215) 594-2802" />
+          </a>
+
+          <a 
+            href="mailto:info@ringocoffee.com" 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <ContactRow icon={emailIcon} text="info@ringocoffee.com" />
+          </a>
         </div>
       </div>
 
@@ -214,7 +241,7 @@ const AboutDesktop: React.FC = () => {
           textAlign: "center",
           padding: "10px 0",
           fontSize: "0.9rem",
-          backgroundColor: "#987384",
+          backgroundColor: "#6EB5D7",
         }}
       >
         &copy; 2025 Ringo Coffee & Donuts&nbsp;&nbsp;&nbsp;&nbsp;Designed by Arash Khavaran&nbsp;&nbsp;&nbsp;&nbsp;Icons by <a href="https://icons8.com" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}>Icons8</a>

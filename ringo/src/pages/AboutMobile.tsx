@@ -27,7 +27,7 @@ const AboutMobile: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: "#987384",
+        backgroundColor: "#6EB5D7",
         color: "black",
         fontFamily: "'Kalam', cursive",
         padding: "24px",
@@ -82,10 +82,37 @@ const AboutMobile: React.FC = () => {
 
       {/* Contact Info */}
       <div style={{ width: "100%", marginBottom: "24px", display: "flex", flexDirection: "column", gap: "16px" }}>
-        <ContactRow icon={instaIcon} text="@ringocoffeeanddonuts" />
-        <ContactRow icon={locIcon} text="2001 Federal St, Philadelphia, PA 19146" />
-        <ContactRow icon={phoneIcon} text="(215) 594-2802" />
-        <ContactRow icon={emailIcon} text="info@ringocoffee.com" />
+        <a 
+          href="https://www.instagram.com/ringocoffeeanddonuts/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ContactRow icon={instaIcon} text="@ringocoffeeanddonuts" />
+        </a>
+
+        <a 
+          href="https://maps.app.goo.gl/oC333buvmotQSFiu8" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ContactRow icon={locIcon} text="2001 Federal St, Philadelphia, PA 19146" />
+        </a>
+
+        <a 
+          href="tel:2155942802" 
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ContactRow icon={phoneIcon} text="(215) 594-2802" />
+        </a>
+
+        <a 
+          href="mailto:info@ringocoffee.com" 
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <ContactRow icon={emailIcon} text="info@ringocoffee.com" />
+        </a>
       </div>
 
       {/* Email Form */}
@@ -147,7 +174,7 @@ const AboutMobile: React.FC = () => {
           <button
             type="submit"
             style={{
-              backgroundColor: "#bbb",
+              backgroundColor: "#0270BA",
               border: "none",
               padding: "6px 16px",
               borderRadius: "20px",

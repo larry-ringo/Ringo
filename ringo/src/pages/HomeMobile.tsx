@@ -53,13 +53,41 @@ const HomeMobile: React.FC = () => {
         <a
           href="https://menu.ringocoffee.com/"
           rel="noopener noreferrer"
-          aria-label="Delivery"
+          aria-label="Menu"
           style={{
             position: "absolute",
             top: 0 * scale,
-            left: 320 * scale,
-            width: 320 * scale,
-            height: 540 * scale,
+            left: 448 * scale,
+            width: 193 * scale,
+            height: 612 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://menu.ringocoffee.com/"
+          rel="noopener noreferrer"
+          aria-label="Menu"
+          style={{
+            position: "absolute",
+            top: 53 * scale,
+            left: 280 * scale,
+            width: 193 * scale,
+            height: 385 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://menu.ringocoffee.com/"
+          rel="noopener noreferrer"
+          aria-label="Menu"
+          style={{
+            position: "absolute",
+            top: 130 * scale,
+            left: 240 * scale,
+            width: 40 * scale,
+            height: 280 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -73,10 +101,10 @@ const HomeMobile: React.FC = () => {
           aria-label="Delivery"
           style={{
             position: "absolute",
-            top: 660 * scale,
+            top: 665 * scale,
             left: 400 * scale,
             width: 240 * scale,
-            height: 476 * scale,
+            height: 471 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -88,30 +116,14 @@ const HomeMobile: React.FC = () => {
           aria-label="Delivery"
           style={{
             position: "absolute",
-            top: 600 * scale,
-            left: 340 * scale,
-            width: 40 * scale,
-            height: 60 * scale,
-            display: "block",
-            cursor: "pointer",
-          }}
-        />
-        <a
-          href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Delivery"
-          style={{
-            position: "absolute",
-            top: 620 * scale,
-            left: 360 * scale,
+            top: 1050 * scale,
+            left: 350 * scale,
             width: 50 * scale,
-            height: 60 * scale,
+            height: 86 * scale,
             display: "block",
             cursor: "pointer",
           }}
         />
-
 
         {/* Example: Pickup Link */}
         <a
@@ -123,8 +135,8 @@ const HomeMobile: React.FC = () => {
             position: "absolute",
             top: 0 * scale,
             left: 0 * scale,
-            width: 205 * scale,
-            height: 460 * scale,
+            width: 200 * scale,
+            height: 465 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -136,10 +148,10 @@ const HomeMobile: React.FC = () => {
           aria-label="Pickup"
           style={{
             position: "absolute",
-            top: 460 * scale,
-            left: 205 * scale,
+            top: 0 * scale,
+            left: 200 * scale,
             width: 40 * scale,
-            height: 60 * scale,
+            height: 100 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -151,10 +163,25 @@ const HomeMobile: React.FC = () => {
           aria-label="Pickup"
           style={{
             position: "absolute",
-            top: 460 * scale,
-            left: 120 * scale,
-            width: 80 * scale,
-            height: 30 * scale,
+            top: 0 * scale,
+            left: 240 * scale,
+            width: 40 * scale,
+            height: 35 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://ringo-coffee-donutsorder.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pickup"
+          style={{
+            position: "absolute",
+            top: 400 * scale,
+            left: 150 * scale,
+            width: 70 * scale,
+            height: 90 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -165,10 +192,10 @@ const HomeMobile: React.FC = () => {
           to="/about"
           style={{
             position: "absolute",
-            top: 580 * scale,
+            top: 525 * scale,
             left: 0 * scale,
-            width: 270 * scale,
-            height: 556 * scale,
+            width: 185 * scale,
+            height: 611 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -177,10 +204,10 @@ const HomeMobile: React.FC = () => {
           to="/about"
           style={{
             position: "absolute",
-            top: 500 * scale,
+            top: 490 * scale,
             left: 0 * scale,
-            width: 130 * scale,
-            height: 636 * scale,
+            width: 90 * scale,
+            height: 35 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -189,10 +216,46 @@ const HomeMobile: React.FC = () => {
           to="/about"
           style={{
             position: "absolute",
-            top: 650 * scale,
+            top: 1030 * scale,
+            left: 185 * scale,
+            width: 85 * scale,
+            height: 106 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          style={{
+            position: "absolute",
+            top: 1030 * scale,
+            left: 270 * scale,
+            width: 45 * scale,
+            height: 50 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          style={{
+            position: "absolute",
+            top: 700 * scale,
             left: 0 * scale,
-            width: 330 * scale,
-            height: 400 * scale,
+            width: 350 * scale,
+            height: 330 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          style={{
+            position: "absolute",
+            top: 775 * scale,
+            left: 350 * scale,
+            width: 25 * scale,
+            height: 190 * scale,
             display: "block",
             cursor: "pointer",
           }}

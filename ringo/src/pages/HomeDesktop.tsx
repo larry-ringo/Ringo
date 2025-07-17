@@ -66,8 +66,72 @@ const HomeDesktop: React.FC = () => {
             position: "absolute",
             top: 0 * scale,
             left: 0 * scale,
-            width: 800 * scale,
-            height: 400 * scale,
+            width: 590 * scale,
+            height: 440 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://menu.ringocoffee.com/"
+          rel="noopener noreferrer"
+          aria-label="Menu"
+          onMouseEnter={() => setImgSrc(hoverMenuImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 0 * scale,
+            left: 590 * scale,
+            width: 250 * scale,
+            height: 275 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://menu.ringocoffee.com/"
+          rel="noopener noreferrer"
+          aria-label="Menu"
+          onMouseEnter={() => setImgSrc(hoverMenuImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 275 * scale,
+            left: 590 * scale,
+            width: 60 * scale,
+            height: 60 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://menu.ringocoffee.com/"
+          rel="noopener noreferrer"
+          aria-label="Menu"
+          onMouseEnter={() => setImgSrc(hoverMenuImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 440 * scale,
+            left: 100 * scale,
+            width: 485 * scale,
+            height: 90 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://menu.ringocoffee.com/"
+          rel="noopener noreferrer"
+          aria-label="Menu"
+          onMouseEnter={() => setImgSrc(hoverMenuImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 530 * scale,
+            left: 200 * scale,
+            width: 320 * scale,
+            height: 50 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -83,9 +147,73 @@ const HomeDesktop: React.FC = () => {
           style={{
             position: "absolute",
             top: 0 * scale,
-            left: 893 * scale,
-            width: 653 * scale,
+            left: 955 * scale,
+            width: 581 * scale,
             height: 365 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
+          rel="noopener noreferrer"
+          aria-label="Delivery"
+          onMouseEnter={() => setImgSrc(hoverDeliveryImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 0 * scale,
+            left: 897 * scale,
+            width: 58 * scale,
+            height: 309 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
+          rel="noopener noreferrer"
+          aria-label="Delivery"
+          onMouseEnter={() => setImgSrc(hoverDeliveryImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 365 * scale,
+            left: 1430 * scale,
+            width: 106 * scale,
+            height: 75 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
+          rel="noopener noreferrer"
+          aria-label="Delivery"
+          onMouseEnter={() => setImgSrc(hoverDeliveryImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 365 * scale,
+            left: 1360 * scale,
+            width: 70 * scale,
+            height: 30 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://www.order.store/store/ringo-coffee-and-donuts-philadelphia/hgQweTNMTNeUQFJh-_ovmg"
+          rel="noopener noreferrer"
+          aria-label="Delivery"
+          onMouseEnter={() => setImgSrc(hoverDeliveryImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 430 * scale,
+            left: 1470 * scale,
+            width: 66 * scale,
+            height: 30 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -104,7 +232,75 @@ const HomeDesktop: React.FC = () => {
             top: 632 * scale,
             left: 0 * scale,
             width: 630 * scale,
-            height: 295 * scale,
+            height: 285 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://ringo-coffee-donutsorder.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pickup"
+          onMouseEnter={() => setImgSrc(hoverPickupImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 550 * scale,
+            left: 0 * scale,
+            width: 85 * scale,
+            height: 82 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://ringo-coffee-donutsorder.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pickup"
+          onMouseEnter={() => setImgSrc(hoverPickupImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 615 * scale,
+            left: 500 * scale,
+            width: 140 * scale,
+            height: 160 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://ringo-coffee-donutsorder.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pickup"
+          onMouseEnter={() => setImgSrc(hoverPickupImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 640 * scale,
+            left: 630 * scale,
+            width: 40 * scale,
+            height: 40 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <a
+          href="https://ringo-coffee-donutsorder.square.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pickup"
+          onMouseEnter={() => setImgSrc(hoverPickupImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 600 * scale,
+            left: 550 * scale,
+            width: 80 * scale,
+            height: 20 * scale,
             display: "block",
             cursor: "pointer",
           }}
@@ -117,10 +313,66 @@ const HomeDesktop: React.FC = () => {
           onMouseLeave={() => setImgSrc(defaultImg)}
           style={{
             position: "absolute",
-            top: 485 * scale,
-            left: 850 * scale,
-            width: 686 * scale,
-            height: 433 * scale,
+            top: 670 * scale,
+            left: 700 * scale,
+            width: 836 * scale,
+            height: 248 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          onMouseEnter={() => setImgSrc(hoverAboutImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 410 * scale,
+            left: 985 * scale,
+            width: 350 * scale,
+            height: 260 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          onMouseEnter={() => setImgSrc(hoverAboutImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 550 * scale,
+            left: 1335 * scale,
+            width: 201 * scale,
+            height: 120 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          onMouseEnter={() => setImgSrc(hoverAboutImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 475 * scale,
+            left: 1335 * scale,
+            width: 130 * scale,
+            height: 75 * scale,
+            display: "block",
+            cursor: "pointer",
+          }}
+        />
+        <Link
+          to="/about"
+          onMouseEnter={() => setImgSrc(hoverAboutImg)}
+          onMouseLeave={() => setImgSrc(defaultImg)}
+          style={{
+            position: "absolute",
+            top: 435 * scale,
+            left: 1335 * scale,
+            width: 60 * scale,
+            height: 40 * scale,
             display: "block",
             cursor: "pointer",
           }}
