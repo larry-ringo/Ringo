@@ -73,6 +73,15 @@ export default function LinkManager() {
     fetchLinks();
   }, []);
 
+  const copyLink = async (name: string, link: string) => {
+    try {
+      await navigator.clipboard.writeText(link);
+    } catch (err) {
+      alert("Failed to copy the link.");
+      console.error(err);
+    }
+  };
+
   return (
     <div>
       <h2>Links</h2>
@@ -127,12 +136,12 @@ export default function LinkManager() {
                   onChange={(e) => setNewLink(e.target.value)}
                   placeholder="New link"
                 />
-                <button onClick={saveEditedLink}>save</button>
-                <button onClick={() => setEditingName(null)}>cancel</button>
+                <button onClick={saveEditedLink} style={{ marginLeft: "0.5rem" }}>save</button>
+                <button onClick={() => setEditingName(null)} style={{ marginLeft: "0.5rem" }}>cancel</button>
               </>
             ) : (
               <>
-                <a href={l.link} style={{ marginLeft: "0.5rem" }}>{l.name}</a>
+                <a href={l.link} style={{ marginLeft: "0.5rem" }} target="_blank">{l.name}</a>
                 <button
                   onClick={() => {
                     setEditingName(l.name);
@@ -143,11 +152,15 @@ export default function LinkManager() {
                 >
                   ✏️ Edit
                 </button>
+                <button onClick={() => copyLink(l.name, l.link)} style={{ marginLeft: "0.5rem" }}>
+                  🔗 Copy
+                </button>
                 {l.name !== "default" && l.name !== "default_mobile" && (
                   <button onClick={() => deleteLink(l.name, l.link)} style={{ marginLeft: "0.5rem" }}>
                     🗑️ Delete
                   </button>
                 )}
+
               </>
             )}
           </li>
